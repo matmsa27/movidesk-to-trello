@@ -1,0 +1,48 @@
+{
+	"Id": 2045,
+	"Type": 0,
+	"Subject": "U-Report website",
+	"Status": "Nível 3 / Tier 3",
+	"Origin": 0,
+	"IsDeleted": false,
+	"ActionCount": 0,
+	"ResolvedInFirstCall": false,
+	"SlaSolutionTime": 0,
+	"Actions": [{
+		"Id": 5,
+		"Type": 0,
+		"Origin": 0,
+		"Description": "Hello Leonardo,\r\n\r\nThank you for addressing all of my suggestions. As for the QR code, it might be displayed directly on the main page as seen below in red (assuming that we change the text to: join on Viber and scan the QR Code). What do you think?\r\n\r\n[cid:image010.png@01D62E37.6D863800][cid:image012.jpg@01D62E39.778B9BE0]\r\n\r\nSearch tool – for internal purposes it would be helpful to see all the polls without being split by categories. I suggest creating a new category „all polls“ where the polls would be listed in chronological order.\r\n[cid:image013.jpg@01D62E39.778B9BE0]\r\n\r\nAnother upgrade that would be helpful is adding „see more polls“ once scrolling down through a poll – a list of all polls would appear. The same idea would apply to the article section that I already mentioned in my previous email.\r\n[cid:image015.jpg@01D62E39.778B9BE0]\r\n\r\nPlease let me know your opinion about the ideas, we are open to your suggestions 😊\r\n\r\nBest wishes,\r\nGabriela\r\nFrom: Ilhasoft Support Team <support@ilhasoft.com.br>\r\nSent: Tuesday, May 19, 2020 10:16 PM\r\nTo: Gabriela Sobkova <gsobkova@unicef.org>\r\nCc: Alexandr Petrov <apetrov@unicef.org>; Iuliana Losetchi <iuliana.official@gmail.com>; Marina Lucia Rieder <mrieder@unicef.org>; Polina Listopad <plistopad@unicef.org>\r\nSubject: Re: U-Report website\r\n\r\n\r\nHi, Gabriela Sobkova!\r\n\r\n\r\n\r\nWe have an update about your ticket #2045 U-Report website:\r\n\r\n\r\nLeonardo Santos\r\n\r\nTuesday, 5/19/2020 4:15 PM\r\n\r\nHello Gabriela,\r\n\r\n\r\n\r\nRegarding the Viber button on the webpage, so far what you can add is the icon in the "Join" section (https://moldova.ureport.in/join/). The feature was developed for the website due to requests from units where Viber is quite popular. Adding and replacing the icons on the website as well as the other suggestions would require the team to make some changes in the webpage code. I am definitely passing this to our developers so they can analyze what can be done and I will tell you when they come to a conclusion.\r\n\r\n\r\n\r\nAbout the QR code, where would you put it on the webpage? Could you send me a screenshot with a draft?\r\n\r\n\r\n\r\nAs for the search tool, it usually displays the polls in chronological order under topics:\r\n\r\n\r\n\r\n[cid:image001.png@01D62E36.7656CCC0]<https://s3.amazonaws.com/movidesk-files/3C6E32B8C9DCA8A3E54D7198948C1A25>\r\n\r\n\r\n\r\n\r\n\r\nHave you spotted a different behavior or the way you envision this tool is putting the polls in chronological order without topics? Could you explaing this matter a little bit more? Suggestions are always appreciated.\r\n\r\n\r\n\r\nSincerely,\r\n\r\n\r\n\r\nLeonardo Santos\r\n\r\n\r\n\r\n\r\n\r\n________________________________\r\nGabriela Sobkova\r\n\r\nMonday, 5/18/2020 6:30 PM\r\n\r\nE-mail from : Gabriela Sobkova <gsobkova@unicef.org<mailto:gsobkova@unicef.org>> to: Ilhasoft Support Team <support@ilhasoft.com.br<mailto:support@ilhasoft.com.br>> In: 5/18/2020 6:29 PM\r\nCc: iuliana.official@gmail.com,apetrov@unicef.org,plistopad@unicef.org,mrieder@unicef.org<mailto:iuliana.official@gmail.com,apetrov@unicef.org,plistopad@unicef.org,mrieder@unicef.org>\r\n\r\nDear Leonardo,\r\n\r\nI was wondering if your team can provide support regarding the U-Report website? There are a couple of issues that we would like to get fixed (see the list below) and I would like to know if you can provide a solution to any of them:\r\n\r\n  1.  Replace the Facebook messenger button (start chat) with Viber\r\n\r\n[cid:image002.jpg@01D62E36.7656CCC0]<https://s3.amazonaws.com/movidesk-files/786924A0C49327B3D1A841A8E04B180D>\r\n\r\n  1.  Add the Viber button in the upper right corner [cid:image003.jpg@01D62E36.7656CCC0] <https://s3.amazonaws.com/movidesk-files/731B2C17B8B4849AF1E31B132F366B4F>\r\n  2.  Add the QR code of Viber on the main page\r\n  3.  In the polls section, add chronological order of polls in the search tool\r\n\r\n[cid:image004.jpg@01D62E36.7656CCC0]<https://s3.amazonaws.com/movidesk-files/F7CB357655A1235E217EA640075C8209>\r\n\r\n  1.  In the articles section, display all published articles (click button „more“) to easily see the list of all articles. The same would be very much appreciated in the polls section. As for now, users have to search for older articles and polls using the search box, which is not user-friendly.\r\n\r\n\r\n\r\nLooking forward to your reply.\r\n\r\n\r\n\r\nBest wishes,\r\nGabriela\r\n\r\n\r\n\r\n\r\n\r\nGabriela Sobková\r\n\r\nU-Report Moldova Manager\r\n\r\n\r\n\r\nUnited Nations Children’s Fund\r\n\r\n131, 31 August 1989 str., Chisinau, MD 2012\r\n\r\nFollow us on Facebook<http://www.facebook.com/unicef>, Twitter<http://twitter.com/#!/UNICEF>, YouTube<http://www.youtube.com/user/unicef> and at www.unicef.org<http://www.unicef.org/>\r\n\r\n[unicef signature]<https://s3.amazonaws.com/movidesk-files/B4B4ED56C639637C779DA712560C662A>\r\n\r\n\r\n\r\n[cid:image006.png@01D62E36.7656CCC0]<https://s3.amazonaws.com/movidesk-files/EDC0E41C22DBB3D524262178588C5044>Please don\"t print this email unless you really need it.\r\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n________________________________\r\n\r\n\r\n\r\nBest regards,\r\n\r\n\r\n [cid:image007.png@01D62E36.7656CCC0] <https://s3.amazonaws.com/movidesk-files/ECFB9264B9248FA021437A71687ABAE8>\r\n\r\n\r\nIlhasoft Support Team\r\n\r\n+55 82 3022-5978\r\n70 José Pontes de Magalhães St, Maceió, AL\r\n\r\nhttp://www.ilhasoft.com.br\r\n\r\n\r\n\r\n\r\n\r\n________________________________\r\n\r\nIf you need to add any details to your ticket, just answer this email or go to: http://atendimento.ilhasoft.com.br/Ticket/Edit/2045?token=28266FA91B73F1AFF4F228BE10E5E0FA91352C9907512994\r\n\r\n\r\n\r\n[MDK11881T54688665]\r\n\r\n________________________________\r\n\r\nTicket generated by Movidesk<http://www.movidesk.com?host=ilhasoft.movidesk.com&ticketId=54688665>\r\n",
+		"CreatedBy": {
+			"Id": "613348413",
+			"PersonType": 0,
+			"ProfileType": 0
+		},
+		"IsDeleted": false,
+		"Attachments": [{
+			"FileName": "text.plain",
+			"Path": "DA12B8227851A3ED8DCA411E04E43F6E",
+			"CreatedBy": {
+				"Id": "613348413",
+				"PersonType": 1,
+				"ProfileType": 2,
+				"BusinessName": "Gabriela Sobkova",
+				"Email": "gsobkova@unicef.org"
+			},
+			"CreatedDate": "2020-05-19T20:59:24.5246876"
+		}]
+	}],
+	"CustomFieldValues": [{
+		"CustomFieldId": 35294,
+		"CustomFieldRuleId": 17311,
+		"Line": 1,
+		"Items": [{
+			"CustomFieldItem": "Internacional ",
+			"StorageFileGuid": ""
+		}]
+	}],
+	"WebhookEvents": [{
+		"Criteria": 2,
+		"Operation": 10
+	}]
+}
