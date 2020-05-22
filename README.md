@@ -33,11 +33,11 @@ The specific version from each library, you can found on `pip-freeze.txt`
 `pipenv shell`
 
 - With the environment already, you need to define some environment variables to run the project. That variables are:
- * TRELLO_KEY -> type: <string> that you can find [here](https://trello.com/app-key)
- * TRELLO_TOKEN -> type: <string> that you can find [here](https://trello.com/app-key)
- * TRELLO_ID_LIST -> type: <string> and you can find follow the steps on [this docummentation](https://www.mangoblogger.com/blog/how-to-get-the-list-id-from-the-trello-api-board/)
+ * `TRELLO_KEY` -> type: <string> that you can find [here](https://trello.com/app-key)
+ * `TRELLO_TOKEN` -> type: <string> that you can find [here](https://trello.com/app-key)
+ * `TRELLO_ID_LIST` -> type: <string> and you can find follow the steps on [this docummentation](https://www.mangoblogger.com/blog/how-to-get-the-list-id-from-the-trello-api-board/)
 
- PS: TRELLO_ID_LIST refers the column on trello board that will be created the new cards.
+ PS: `TRELLO_ID_LIST` refers the column on trello board that will be created the new cards.
  
  
  You can define the environemnts variables with a `.env` file or using the command `export TRELLO_ID_LIST=<value>`.
