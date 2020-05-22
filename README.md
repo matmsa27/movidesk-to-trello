@@ -43,7 +43,8 @@ The specific version from each library, you can found on `pip-freeze.txt`
 
  PS: `TRELLO_ID_LIST` refers the column on trello board that will be created the new cards.
 
-- To run this project you must need run the command:
+- To run this project you must need run this commands:
+ `cd movidesk-to-trello`
  `flask run`
  
  You can define the environemnts variables with a `.env` file or using the command `export TRELLO_ID_LIST=<value>`.
