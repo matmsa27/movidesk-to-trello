@@ -42,7 +42,9 @@ The specific version from each library, you can found on `pip-freeze.txt`
 | `TRELLO_ID_LIST`     	| string 	| and you can find follow the steps on [this docummentation](https://www.mangoblogger.com/blog/how-to-get-the-list-id-from-the-trello-api-board/) 	|
 
  PS: `TRELLO_ID_LIST` refers the column on trello board that will be created the new cards.
- 
+
+- To run this project you must need run the command:
+ `flask run`
  
  You can define the environemnts variables with a `.env` file or using the command `export TRELLO_ID_LIST=<value>`.
 
