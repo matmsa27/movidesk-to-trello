@@ -34,8 +34,9 @@ The specific version from each library, you can found on `pip-freeze.txt`
 
 - With the environment already, you need to define some environment variables to run the project. That variables are:
 
- | Environment Variable 	| Type   	| Description                                                                                                                                     	|
+| Environment Variable 	| Type   	| Description                                                                                                                                     	|
 |----------------------	|--------	|-------------------------------------------------------------------------------------------------------------------------------------------------	|
+| `DEBUG`              	| bool   	| Responsible for management to debugging mode                                                                                                    	|
 | `TRELLO_KEY`         	| string 	| that you can find [here](https://trello.com/app-key)                                                                                            	|
 | `TRELLO_TOKEN`       	| string 	| that you can find [here](https://trello.com/app-key)                                                                                            	|
 | `TRELLO_ID_LIST`     	| string 	| and you can find follow the steps on [this docummentation](https://www.mangoblogger.com/blog/how-to-get-the-list-id-from-the-trello-api-board/) 	|
