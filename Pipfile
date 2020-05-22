@@ -9,7 +9,8 @@ verify_ssl = true
 flask = "==1.1.2"
 requests = "==2.23.0"
 python-decouple = "==3.3"
-flask-api = "*"
+flask-api = "==2.0"
+flake8 = "==3.8.1"
 
 [requires]
 python_version = "3.6"
