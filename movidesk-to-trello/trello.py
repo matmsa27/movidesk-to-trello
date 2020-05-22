@@ -1,5 +1,4 @@
 import requests
-import json
 
 from config import (
     TRELLO_BASE_URL,
@@ -11,7 +10,6 @@ from config import (
 
 
 def payload_to_trello(data):
-    data = json.loads(data)
 
     payload = {
         "name": data.get("Subject"),
@@ -26,13 +24,13 @@ def payload_to_trello(data):
 def create_card(data):
     payload = payload_to_trello(data)
     url = "https://{}/{}".format(TRELLO_BASE_URL, TRELLO_CREATE_CARDS)
-    
+
     params = {
         "key": TRELLO_KEY,
         "token": TRELLO_TOKEN,
         "idList": TRELLO_ID_LIST,
         "name": payload.get("name")
     }
-    
+
     response = requests.post(url=url, params=params, timeout=30)
     return response
