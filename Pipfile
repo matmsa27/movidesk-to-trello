@@ -12,4 +12,4 @@ python-decouple = "==3.3"
 flask-api = "*"
 
 [requires]
-python_version = "3.6"
+python_version = "3.8"
