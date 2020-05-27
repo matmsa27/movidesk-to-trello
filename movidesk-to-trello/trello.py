@@ -32,7 +32,8 @@ def create_card(data):
         "key": TRELLO_KEY,
         "token": TRELLO_TOKEN,
         "idList": TRELLO_ID_LIST,
-        "name": payload.get("name")
+        "name": payload.get("name"),
+        "desc": payload.get("description")
     }
     try:
         response = requests.post(url=url, params=params, timeout=20)
