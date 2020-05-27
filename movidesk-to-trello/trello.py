@@ -15,7 +15,7 @@ from config import (
 def payload_to_trello(data):
 
     payload = {
-        "name": data.get("Subject"),
+        "name": "{} - #{}".format(data.get("Subject"), data.get("Id")),
         "description": data.get("Actions")[0].get("Description"),
         "label": data.get("Status"),
         "ticket_id": data.get("Id")
