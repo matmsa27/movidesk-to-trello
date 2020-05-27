@@ -15,7 +15,7 @@ from config import (
 def payload_to_trello(data):
 
     payload = {
-        "name": data.get("Subject"),
+        "name": "{} - #{}".format(data.get("Subject"), data.get("Id")),
         "description": data.get("Actions")[0].get("Description"),
         "label": data.get("Status"),
         "ticket_id": data.get("Id")
@@ -32,7 +32,8 @@ def create_card(data):
         "key": TRELLO_KEY,
         "token": TRELLO_TOKEN,
         "idList": TRELLO_ID_LIST,
-        "name": payload.get("name")
+        "name": payload.get("name"),
+        "desc": payload.get("description")
     }
     try:
         response = requests.post(url=url, params=params, timeout=20)
