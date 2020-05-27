@@ -1,5 +1,8 @@
 import requests
 
+from requests.exceptions import Timeout
+
+
 from config import (
     TRELLO_BASE_URL,
     TRELLO_CREATE_CARDS,
@@ -31,6 +34,8 @@ def create_card(data):
         "idList": TRELLO_ID_LIST,
         "name": payload.get("name")
     }
-
-    response = requests.post(url=url, params=params, timeout=30)
+    try:
+        response = requests.post(url=url, params=params, timeout=20)
+    except Timeout:
+        response = requests.post(url=url, params=params, timeout=30)
     return response
