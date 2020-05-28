@@ -3,7 +3,7 @@ import requests
 from requests.exceptions import Timeout
 
 
-from config import (
+from application.config import (
     TRELLO_BASE_URL,
     TRELLO_CREATE_CARDS,
     TRELLO_ID_LIST,
