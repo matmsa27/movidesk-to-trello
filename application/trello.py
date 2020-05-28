@@ -1,6 +1,9 @@
 import requests
 
-from config import (
+from requests.exceptions import Timeout
+
+
+from application.config import (
     TRELLO_BASE_URL,
     TRELLO_CREATE_CARDS,
     TRELLO_ID_LIST,
@@ -12,7 +15,7 @@ from config import (
 def payload_to_trello(data):
 
     payload = {
-        "name": data.get("Subject"),
+        "name": "{} - #{}".format(data.get("Subject"), data.get("Id")),
         "description": data.get("Actions")[0].get("Description"),
         "label": data.get("Status"),
         "ticket_id": data.get("Id")
@@ -29,8 +32,11 @@ def create_card(data):
         "key": TRELLO_KEY,
         "token": TRELLO_TOKEN,
         "idList": TRELLO_ID_LIST,
-        "name": payload.get("name")
+        "name": payload.get("name"),
+        "desc": payload.get("description")
     }
-
-    response = requests.post(url=url, params=params, timeout=30)
+    try:
+        response = requests.post(url=url, params=params, timeout=20)
+    except Timeout:
+        response = requests.post(url=url, params=params, timeout=30)
     return response
