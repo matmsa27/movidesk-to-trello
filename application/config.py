@@ -14,6 +14,6 @@ Variables for Trello API
 '''
 TRELLO_BASE_URL = "api.trello.com"
 TRELLO_CREATE_CARDS = "1/cards"
-TRELLO_KEY = config('TRELLO_KEY')
+TRELLO_KEY = config("TRELLO_KEY")
 TRELLO_ID_LIST = config("TRELLO_ID_LIST")
 TRELLO_TOKEN = config("TRELLO_TOKEN")
