@@ -51,14 +51,15 @@ def create_card(data):
 
 
 def add_label_to_a_card(card_id, data):
-    url = "https://%s/%s/%s/idLabels" % (TRELLO_BASE_URL, TRELLO_CARDS, card_id)
-    
+    url = "https://%s/%s/%s/idLabels" % (
+        TRELLO_BASE_URL, TRELLO_CARDS, card_id)
+
     card_type = data["CustomFieldValues"][0]["Items"][0]["CustomFieldItem"]
     card_type = card_type.lower().strip()
 
     params = params_auth_trello()
 
-    if card_type == "plataforma":  
+    if card_type == "plataforma":
         params["value"] = TRELLO_ID_LABEL_SERVICES
         response = requests.post(url=url, params=params, timeout=20)
     else:
