@@ -25,7 +25,7 @@ def params_auth_trello():
 def payload_to_trello(data):
 
     payload = {
-        "name": "{} - #{}".format(data.get("Subject"), data.get("Id")),
+        "name": "%s - #%s" % (data.get("Subject"), data.get("Id")),
         "description": data.get("Actions")[0].get("Description"),
         "label": data.get("Status"),
         "ticket_id": data.get("Id")
@@ -36,7 +36,7 @@ def payload_to_trello(data):
 
 def create_card(data):
     payload = payload_to_trello(data)
-    url = "https://{}/{}".format(TRELLO_BASE_URL, TRELLO_CARDS)
+    url = "https://%s/%s" % (TRELLO_BASE_URL, TRELLO_CARDS)
 
     params = params_auth_trello()
     params["idList"] = TRELLO_ID_LIST
@@ -51,7 +51,7 @@ def create_card(data):
 
 
 def add_label_to_a_card(card_id, data):
-    url = "https://{}/{}/{}/idLabels".format(TRELLO_BASE_URL, TRELLO_CARDS, card_id)
+    url = "https://%s/%s/%s/idLabels" % (TRELLO_BASE_URL, TRELLO_CARDS, card_id)
     
     card_type = data["CustomFieldValues"][0]["Items"][0]["CustomFieldItem"]
     card_type = card_type.lower().strip()
