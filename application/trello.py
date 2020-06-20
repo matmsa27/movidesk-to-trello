@@ -2,9 +2,9 @@ import requests
 
 from requests.exceptions import Timeout
 
-
 from application.config import (
     TRELLO_BASE_URL,
+    TRELLO_BOARD_ID,
     TRELLO_CARDS,
     TRELLO_ID_LIST,
     TRELLO_KEY,
@@ -22,11 +22,21 @@ def params_auth_trello():
     return params
 
 
+def make_card_name(data):
+    name_card = "%s - #%s" % (data.get("Subject"), data.get("Id"))
+    return name_card
+
+
+def make_card_description(data):
+    description_card = data.get("Actions")[0].get("Description")
+    return description_card
+
+
 def payload_to_trello(data):
 
     payload = {
-        "name": "%s - #%s" % (data.get("Subject"), data.get("Id")),
-        "description": data.get("Actions")[0].get("Description"),
+        "name": make_card_name(data),
+        "description": make_card_description(data),
         "label": data.get("Status"),
         "ticket_id": data.get("Id")
     }
@@ -50,6 +60,41 @@ def create_card(data):
     return response
 
 
+def get_cards_on_board():
+    url = "https://%s//1/boards/%s/cards" % (
+        TRELLO_BASE_URL, TRELLO_BOARD_ID)
+    
+    params = params_auth_trello()
+
+    try:
+        response = requests.get(url=url, params=params, timeout=20)
+    except Timeout:
+        response = requests.get(url=url, params=params, timeout=30)
+    return response
+
+
+def check_if_card_exists(card_name_check):
+    cards_on_board = get_cards_on_board()
+
+    for card in cards_on_board.json():
+        if card["name"] == card_name_check:
+            return card["id"]
+
+
+def add_comment_on_card(card_id, comment_text):
+    url = "https://%s/%s/%s/actions/comments" % (
+        TRELLO_BASE_URL, TRELLO_CARDS, card_id)
+    
+    params = params_auth_trello()
+    params["text"] = comment_text
+
+    try:
+        response = requests.post(url=url, params=params, timeout=20)
+    except Timeout:
+        response = requests.post(url=url, params=params, timeout=30)
+    return response
+
+
 def add_label_to_a_card(card_id, data):
     url = "https://%s/%s/%s/idLabels" % (
         TRELLO_BASE_URL, TRELLO_CARDS, card_id)
@@ -64,5 +109,5 @@ def add_label_to_a_card(card_id, data):
         response = requests.post(url=url, params=params, timeout=20)
     else:
         params["value"] = TRELLO_ID_LABEL_N3
-        response = requests.post(url=url, params=params, timeout=20)
+        response = requests.post(url=url, params=params, timeout=30)
     return response
