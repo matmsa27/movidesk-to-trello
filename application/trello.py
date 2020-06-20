@@ -10,7 +10,11 @@ from application.config import (
     TRELLO_KEY,
     TRELLO_TOKEN,
     TRELLO_ID_LABEL_N3,
-    TRELLO_ID_LABEL_SERVICES
+    TRELLO_ID_LABEL_SERVICES,
+)
+from application.utils import (
+    make_card_description,
+    make_card_name,
 )
 
 
@@ -20,16 +24,6 @@ def params_auth_trello():
         token=TRELLO_TOKEN
     )
     return params
-
-
-def make_card_name(data):
-    name_card = "%s - #%s" % (data.get("Subject"), data.get("Id"))
-    return name_card
-
-
-def make_card_description(data):
-    description_card = data.get("Actions")[0].get("Description")
-    return description_card
 
 
 def payload_to_trello(data):
@@ -71,14 +65,6 @@ def get_cards_on_board():
     except Timeout:
         response = requests.get(url=url, params=params, timeout=30)
     return response
-
-
-def check_if_card_exists(card_name_check):
-    cards_on_board = get_cards_on_board()
-
-    for card in cards_on_board.json():
-        if card["name"] == card_name_check:
-            return card["id"]
 
 
 def add_comment_on_card(card_id, comment_text):

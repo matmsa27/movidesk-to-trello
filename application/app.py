@@ -3,10 +3,13 @@ from flask_api import status
 from application.trello import (
     add_label_to_a_card,
     add_comment_on_card,
+    create_card,
+    get_cards_on_board,
+)
+from application.utils import (
     check_if_card_exists,
-    create_card, 
-    make_card_name,
     make_card_description,
+    make_card_name,
 )
 
 
@@ -16,7 +19,9 @@ def receive_webhook_from_movidesk(request):
 
         # check if card exists
         card_name = make_card_name(data)
-        card_checked = check_if_card_exists(card_name)
+        cards_on_board_list = get_cards_on_board()
+
+        card_checked = check_if_card_exists(card_name, cards_on_board_list)
 
         # if exists add comment
         if card_checked:
