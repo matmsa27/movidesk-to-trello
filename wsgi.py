@@ -1,3 +1,4 @@
+import os
 import sentry_sdk
 
 from flask import request
@@ -25,4 +26,5 @@ def home():
 
 
 if __name__ == '__main__':
-    app.run(debug=DEBUG)
+    port = int(os.environ.get("PORT", 5000))
+    app.run(host='0.0.0.0', port=port)
