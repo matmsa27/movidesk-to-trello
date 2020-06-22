@@ -20,12 +20,19 @@ def make_card_description(data):
 
 
 def get_name_from_movidesk_json(data):
-    name = data.get("Actions")[0].get("Attachments")[0].get("CreatedBy").get("BusinessName")
-    return name
+    try:
+        name = data.get("Actions")[0].get("Attachments")[0].get("CreatedBy").get("BusinessName")
+        return name
+    except (KeyError, IndexError):
+        return ''
+
 
 def get_email_from_movidesk_json(data):
-    email = data.get("Actions")[0].get("Attachments")[0].get("CreatedBy").get("Email")
-    return email
+    try:
+        email = data.get("Actions")[0].get("Attachments")[0].get("CreatedBy").get("Email")
+        return email
+    except (KeyError, IndexError):
+        return ''
 
 
 def check_if_card_exists(card_name_check, cards_on_board_list):
