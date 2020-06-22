@@ -11,6 +11,7 @@ from application.config import (
     TRELLO_TOKEN,
     TRELLO_ID_LABEL_N3,
     TRELLO_ID_LABEL_SERVICES,
+    TRELLO_ID_LABEL_TRIAGE,
 )
 from application.utils import (
     make_card_description,
@@ -85,15 +86,19 @@ def add_label_to_a_card(card_id, data):
     url = "https://%s/%s/%s/idLabels" % (
         TRELLO_BASE_URL, TRELLO_CARDS, card_id)
 
-    card_type = data["CustomFieldValues"][0]["Items"][0]["CustomFieldItem"]
-    card_type = card_type.lower().strip()
+    try:
+        card_type = data["CustomFieldValues"][0]["Items"][0]["CustomFieldItem"]
+        card_type = card_type.lower().strip()
 
-    params = params_auth_trello()
+        params = params_auth_trello()
 
-    if card_type == "plataforma":
-        params["value"] = TRELLO_ID_LABEL_SERVICES
+        if card_type == "plataforma":
+            params["value"] = TRELLO_ID_LABEL_SERVICES
+            response = requests.post(url=url, params=params, timeout=20)
+        else:
+            params["value"] = TRELLO_ID_LABEL_N3
+            response = requests.post(url=url, params=params, timeout=30)
+    except (KeyError, IndexError):
+        params["value"] = TRELLO_ID_LABEL_TRIAGE
         response = requests.post(url=url, params=params, timeout=20)
-    else:
-        params["value"] = TRELLO_ID_LABEL_N3
-        response = requests.post(url=url, params=params, timeout=30)
     return response
