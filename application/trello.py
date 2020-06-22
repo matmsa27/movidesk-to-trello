@@ -86,11 +86,11 @@ def add_label_to_a_card(card_id, data):
     url = "https://%s/%s/%s/idLabels" % (
         TRELLO_BASE_URL, TRELLO_CARDS, card_id)
 
+    params = params_auth_trello()
+
     try:
         card_type = data["CustomFieldValues"][0]["Items"][0]["CustomFieldItem"]
         card_type = card_type.lower().strip()
-
-        params = params_auth_trello()
 
         if card_type == "plataforma":
             params["value"] = TRELLO_ID_LABEL_SERVICES
