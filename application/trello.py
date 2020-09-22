@@ -56,9 +56,9 @@ def create_card(data):
 
 
 def get_cards_on_board():
-    url = "https://%s//1/boards/%s/cards" % (
+    url = "https://%s/1/boards/%s/cards" % (
         TRELLO_BASE_URL, TRELLO_BOARD_ID)
-    
+
     params = params_auth_trello()
 
     try:

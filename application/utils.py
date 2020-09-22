@@ -5,16 +5,16 @@ code organization and all logical
 
 
 def make_card_name(data):
-    name_card = "%s - #%s" % (data.get("Subject"), data.get("Id"))
+    name_card = "%s - #%s" % (data.get("body").get("Subject"), data.get("body").get("Id"))
     return name_card
 
 
 def make_card_description(data):
-    description_card = data.get("Actions")[0].get("Description")
-    name = get_name_from_movidesk_json(data)
-    email = get_email_from_movidesk_json(data)
+    description = data.get("body").get("Actions")[0].get("Description")
+    # name = get_name_from_movidesk_json(data)
+    # email = get_email_from_movidesk_json(data)
 
-    description = "{} \n {} \n {} \n".format(description_card, name, email)
+    # description = "{} \n {} \n {} \n".format(description_card, name, email)
 
     return description
 
