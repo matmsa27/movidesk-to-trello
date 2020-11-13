@@ -35,7 +35,8 @@ def check_card_logical_view(data, due_date):
         # If card exists, the request will insert a comment on card
         description = make_card_description(data)
         comment_response = add_comment_on_card(card_checked["id"], description)
-        add_due_date_on_card(card_checked["id"], due_date)            
+        if due_date:
+            add_due_date_on_card(card_checked["id"], due_date)            
 
         if comment_response.status_code == 200:
             return comment_response.json(), status.HTTP_200_OK
@@ -73,7 +74,10 @@ def receive_webhook_from_movidesk(request):
         If checked, the request returns the response for insert a comment
         If not exists, will create a new card, and after that add the label
         '''
-        due_date = get_movidesk_ticket_info(data.get("Id")).json().get("slaSolutionDate") + '.000Z'
+        due_date = get_movidesk_ticket_info(data.get("Id")).json().get("slaSolutionDate")
+        if due_date:
+            due_date = due_date + '.000Z'
+
         checked = check_card_logical_view(data, due_date)
 
         if checked:
